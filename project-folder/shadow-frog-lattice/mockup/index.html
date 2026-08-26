@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shadow-Frog in Lattice - Interactive Mockup</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="panel-only">
+  <header class="app-header">
+    <div class="brand">
+      <svg class="lattice-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M2 2h28v28H2zM2 2l28 28M30 2L2 30M2 10h28M2 22h28M10 2v28M22 2v28" fill="none" stroke="currentColor"/>
+        <path d="M2 2l8 28L22 2l8 28M2 30L10 2l12 28L30 2" fill="none" stroke="currentColor"/>
+      </svg>
+      <span class="brand-name">Lattice</span>
+    </div>
+    <div class="product-switcher">
+      <span class="discovery-icon">D</span>
+      <span>Discovery</span>
+      <span class="chevron">v</span>
+    </div>
+    <div class="header-spacer"></div>
+    <button class="icon-button" aria-label="Notifications">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+    </button>
+    <button class="icon-button" aria-label="Help">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 9a3.5 3.5 0 1 1 5.6 2.8c-1.2.9-2.1 1.5-2.1 3.2M12 19h.01"/></svg>
+    </button>
+    <div class="avatar">D</div>
+    <span class="user-name">darya</span>
+    <span class="chevron">v</span>
+  </header>
+
+  <div class="app-shell">
+    <nav class="sidebar" aria-label="Primary navigation">
+      <a class="nav-item" href="#"><span class="nav-glyph">H</span>Home</a>
+      <a class="nav-item" href="#"><span class="nav-glyph">D</span>Directory<span class="nav-arrow">&gt;</span></a>
+      <a class="nav-item" href="#"><span class="nav-glyph">G</span>GPU</a>
+      <a class="nav-item" href="#"><span class="nav-glyph">E</span>Events</a>
+      <a class="nav-item" href="#"><span class="nav-glyph">V</span>Voice of Customer</a>
+
+      <div class="nav-section active">
+        <div class="nav-item nav-heading">
+          <span class="session-glyph"></span>
+          <span>Sessions</span>
+          <span class="sidebar-search"></span>
+          <span class="chevron">v</span>
+        </div>
+        <div class="session-tree">
+          <a class="session-link selected" href="#">
+            <span class="session-dot"></span>
+            Creative model evaluation
+            <span class="lock-icon"></span>
+          </a>
+          <a class="session-link" href="#">
+            <span class="session-dot"></span>
+            Evaluation metric review
+            <span class="lock-icon"></span>
+          </a>
+          <a class="browse-link" href="#"><span>&gt;</span> Browse all sessions</a>
+        </div>
+      </div>
+
+      <div class="nav-bottom">
+        <a class="nav-item" href="#"><span class="nav-glyph">A</span>Arcs</a>
+        <a class="nav-item" href="#"><span class="nav-glyph">+</span>Apps</a>
+        <a class="nav-item" href="#"><span class="nav-glyph">P</span>Demos<span class="external-icon">&#8599;</span></a>
+      </div>
+    </nav>
+
+    <main class="workspace">
+      <div class="workspace-toolbar">
+        <div class="breadcrumbs">
+          <a href="#">Projects</a>
+          <span>/</span>
+          <strong>Froggy-Training ML</strong>
+        </div>
+        <div class="toolbar-actions">
+          <button class="subtle-button">Share</button>
+          <button class="more-button" aria-label="More actions">...</button>
+        </div>
+      </div>
+
+      <section class="session-header">
+        <div>
+          <div class="eyebrow">MSR PROJECT</div>
+          <h1>Froggy-Training ML</h1>
+          <p>Generating novel, useful research directions with foundation models.</p>
+        </div>
+        <div class="session-meta">
+          <span class="privacy-pill">Active research</span>
+          <span>Updated yesterday</span>
+        </div>
+      </section>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" aria-selected="true">Overview</button>
+        <button class="tab">Research</button>
+        <button class="tab">Artifacts <span class="tab-count">6</span></button>
+        <button class="tab">Team <span class="tab-count">4</span></button>
+      </div>
+
+      <section class="content-area">
+        <div class="project-overview">
+          <section class="project-focus">
+            <div>
+              <span class="project-kicker">CURRENT RESEARCH FOCUS</span>
+              <h2>Evaluate creative idea generation</h2>
+              <p>The team can generate promising research ideas, but needs a rigorous metric for whether outputs are genuinely creative—not merely fluent recombinations.</p>
+            </div>
+            <span class="status-badge">In progress</span>
+          </section>
+
+          <div class="project-grid">
+            <section class="project-panel">
+              <div class="project-panel-header">
+                <h3>Evaluation goals</h3>
+                <button class="panel-link">View research plan</button>
+              </div>
+              <ul class="goal-list">
+                <li><span class="goal-check">1</span><div><strong>Define creativity</strong><p>Turn an ambiguous concept into measurable dimensions.</p></div></li>
+                <li><span class="goal-check">2</span><div><strong>Ground judgments</strong><p>Require evidence from the generated idea and research context.</p></div></li>
+                <li><span class="goal-check">3</span><div><strong>Validate the signal</strong><p>Confirm the metric agrees with domain experts before optimization.</p></div></li>
+              </ul>
+            </section>
+
+            <section class="project-panel blocker-panel">
+              <span class="project-kicker">OPEN BLOCKER</span>
+              <h3>No agreed evaluation metric</h3>
+              <p>Current judge prompts ask for a single creativity score. Reviewers disagree about novelty, recombination, and feasibility.</p>
+              <div class="blocker-meta"><span>Owner: Priya S.</span><span>High priority</span></div>
+            </section>
+          </div>
+
+          <section class="project-panel artifacts-panel">
+            <div class="project-panel-header">
+              <h3>Recent project artifacts</h3>
+              <button class="panel-link">View all</button>
+            </div>
+            <div class="artifact-row">
+              <span class="artifact-icon">D</span>
+              <div><strong>Creative model evaluation plan</strong><p>Evaluation criteria, judge prompts, and open questions</p></div>
+              <span class="artifact-date">Yesterday</span>
+            </div>
+            <div class="artifact-row">
+              <span class="artifact-icon code">C</span>
+              <div><strong>Idea judge experiment results</strong><p>Pairwise ratings from three model-based evaluators</p></div>
+              <span class="artifact-date">Aug 21</span>
+            </div>
+            <div class="artifact-row">
+              <span class="artifact-icon note">N</span>
+              <div><strong>Researcher feedback synthesis</strong><p>What domain experts mean when they call an idea creative</p></div>
+              <span class="artifact-date">Aug 18</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="idea-feed" id="ideaFeed">
+          <div class="feed-heading">
+            <div class="idea-navigation" aria-label="Generated idea navigation">
+              <span class="idea-position" id="ideaPosition">Idea 1 of 2</span>
+              <button class="idea-nav-button" id="previousIdeaButton" disabled aria-label="Go to previous idea">
+                <span aria-hidden="true">&larr;</span>
+                Previous
+              </button>
+              <button class="idea-nav-button next" id="nextIdeaButton">
+                Next idea
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <article class="idea-card" id="ideaCard">
+            <div class="idea-card-top">
+              <div>
+                <span class="idea-status" id="ideaStatus">NEW CONNECTION</span>
+                <h3 id="ideaTitle">Use the STAC rubric as an RL signal for creative models</h3>
+              </div>
+            </div>
+
+            <p class="idea-summary" id="ideaSummary">
+              Froggy-Training needs a reliable reward signal for training models to generate creative research ideas. Adapt STAC's evaluation methodology into an evidence-grounded rubric for novelty and utility/feasibility, then use the validated rubric score as the reinforcement-learning reward.
+            </p>
+
+            <div class="score-grid">
+              <button class="score-card novelty" data-score="novelty" aria-expanded="false">
+                <span class="score-label">Novelty</span>
+                <span class="score-row"><strong id="noveltyScore">3.7</strong><span>/ 4</span></span>
+                <span class="score-meter"><span id="noveltyMeter" style="width: 92.5%"></span></span>
+                <span class="score-caption" id="noveltyCaption">High</span>
+                <span class="score-action">View breakdown</span>
+              </button>
+              <button class="score-card utility" data-score="utility" aria-expanded="false">
+                <span class="score-label">Utility / feasibility</span>
+                <span class="score-row"><strong id="utilityScore">3.4</strong><span>/ 4</span></span>
+                <span class="score-meter"><span id="utilityMeter" style="width: 85%"></span></span>
+                <span class="score-caption" id="utilityCaption">Strong</span>
+                <span class="score-action">View breakdown</span>
+              </button>
+            </div>
+
+            <div class="score-details" id="scoreDetails" hidden>
+              <div class="score-details-header">
+                <div>
+                  <span class="detail-kicker">STAC MEASUREMENT</span>
+                  <h4 id="scoreDetailsTitle">Novelty score</h4>
+                </div>
+                <button class="close-details" id="closeScoreDetails" aria-label="Close score details">x</button>
+              </div>
+              <p id="scoreDetailsSummary"></p>
+              <div class="constituent-list" id="constituentList"></div>
+              <p class="score-note">Concept score shown on a 0-4 scale. Each constituent is grounded in retrieved project evidence.</p>
+            </div>
+
+            <details class="idea-disclosure" id="ideaDetails">
+              <summary>
+                <span>
+                  <strong>Idea details</strong>
+                  <small>Description, subsystem, files, and shadow anchor</small>
+                </span>
+                <span class="disclosure-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="idea-details-content">
+                <div class="detail-field">
+                  <span class="detail-label">Generated description</span>
+                  <p id="ideaDescription">Implement a structured creativity reward that scores generated research ideas on STAC-derived novelty and utility/feasibility constituents. Aggregate the calibrated constituent scores into the reward used by Froggy-Training's reinforcement-learning loop, with held-out human evaluation as a release gate.</p>
+                </div>
+                <div class="detail-field">
+                  <span class="detail-label">Subsystem</span>
+                  <strong id="ideaSubsystem">training / reward modeling</strong>
+                </div>
+                <div class="detail-field">
+                  <span class="detail-label">Files referenced</span>
+                  <div class="file-list" id="ideaFiles">
+                    <code>froggy_training/rewards/stac_reward.py</code>
+                    <code>froggy_training/configs/creative_rl.yaml</code>
+                    <code>froggy_training/eval/stac_rubric.yaml</code>
+                  </div>
+                </div>
+                <div class="detail-field">
+                  <span class="detail-label">Shadow anchor</span>
+                  <p id="ideaShadowAnchor">STAC evaluation methodology: construct systematization, evidence-grounded constituent scoring, and multi-lens validity checks.</p>
+                </div>
+              </div>
+            </details>
+
+            <section class="product-impact">
+              <div class="impact-heading">
+                <div>
+                  <h4>Potential product impact</h4>
+                </div>
+              </div>
+              <p id="impactSummary">Enables Froggy-Training to create agents for judgment-heavy business workflows where success cannot be reduced to a deterministic pass/fail check. STAC-derived rubrics can turn ambiguous qualities—such as sound legal reasoning, prudent financial judgment, and useful strategic recommendations—into structured RL signals.</p>
+              <ul id="impactOutcomes">
+                <li>Extend RL-trained agents into legal review, financial analysis, compliance, procurement, and other expert workflows without predefined verifiable outcomes.</li>
+                <li>Keep subjective outcomes auditable by exposing the rubric dimensions behind each reward and monitoring disagreement with human experts.</li>
+              </ul>
+            </section>
+
+            <section class="refined-plan" id="refinedPlan" hidden>
+              <div class="refined-heading">
+                <span class="check-badge">+</span>
+                <div>
+                  <span class="detail-kicker">REFINED IN CHAT</span>
+                  <h4>Proposed evaluation plan</h4>
+                </div>
+              </div>
+              <ol id="refinedPlanList">
+                <li>Adapt STAC's novelty and utility/feasibility constituents into a reward rubric.</li>
+                <li>Calibrate and validate the reward scorer against domain-expert comparisons.</li>
+                <li>Use the score as an RL signal and monitor quality drift and reward hacking.</li>
+              </ol>
+            </section>
+
+            <div class="source-row">
+              <span class="source-label">Connected from</span>
+              <a class="source-pill" href="#"><span class="source-dot blue"></span><span id="primarySource">Froggy-Training RL pipeline</span></a>
+              <span class="connection-line"></span>
+              <a class="source-pill" href="#"><span class="source-dot purple"></span><span id="secondarySource">STAC evaluation methodology</span></a>
+            </div>
+
+            <div class="idea-actions">
+              <button class="action-button secondary" id="notInterestedButton">
+                <span class="action-icon">x</span>
+                Not interested
+              </button>
+              <a class="action-button secondary" id="addIssueButton" href="#" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v8M8 12h8"></path></svg>
+                Add issue
+              </a>
+              <button class="action-button primary" id="chatButton">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12H8l-4 3z"></path></svg>
+                Chat about / refine it
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="chat-panel" aria-label="Session chat">
+      <div class="chat-header">
+        <div>
+          <span class="panel-eyebrow">SESSION</span>
+          <strong>&#128161; Ideas</strong>
+        </div>
+        <div class="chat-header-actions">
+          <button class="blue-button">+ New session</button>
+        </div>
+      </div>
+
+      <div class="chat-body" id="chatBody">
+        <div class="session-chat-message shadow-session-message">
+          <div class="message-avatar">SF</div>
+          <div>
+            <div class="session-chat-meta"><strong>Shadow-Frog</strong><span>10:15 AM</span></div>
+            <p>I found two evidence-backed connections. Review each idea, refine it with me, create an issue, or tell me why it is not useful.</p>
+          </div>
+        </div>
+        <div class="chat-empty" id="chatEmpty" hidden></div>
+      </div>
+
+      <div class="privacy-notice">
+        <span class="lock-icon dark"></span>
+        <span>Visible to</span>
+        <select aria-label="Session visibility">
+          <option>Private</option>
+        </select>
+        <span>Only you can open this session.</span>
+      </div>
+
+      <div class="composer">
+        <textarea id="chatInput" rows="3" placeholder="Ask anything or say what you want to do..."></textarea>
+        <div class="composer-footer">
+          <div class="composer-tools"><button>+</button><button aria-label="Attach">A</button></div>
+          <div class="composer-model"><span>Claude Opus 5</span><span>High</span></div>
+          <button class="send-button" id="sendButton" aria-label="Send message">&gt;</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="modal-backdrop" id="feedbackModal" hidden>
+    <section class="feedback-modal" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+      <button class="modal-close" id="feedbackClose" aria-label="Close">x</button>
+      <div class="modal-icon">x</div>
+      <h2 id="feedbackTitle">Why isn't this idea useful?</h2>
+      <p>This step is optional. Your feedback helps Shadow-Frog improve future cross-project ideas.</p>
+      <div class="reason-chips" id="reasonChips">
+        <button>Not relevant to this project</button>
+        <button>Already explored</button>
+        <button>Not feasible</button>
+        <button>Weak evidence</button>
+      </div>
+      <label for="feedbackText">Tell us more <span>(optional)</span></label>
+      <textarea id="feedbackText" rows="4" placeholder="What made this a bad idea?"></textarea>
+      <div class="modal-actions">
+        <button class="action-button secondary" id="feedbackSkip">Skip</button>
+        <button class="action-button primary" id="feedbackSubmit">Submit feedback</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" hidden>
+    <span class="toast-check">+</span>
+    <span id="toastText">Feedback submitted</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
