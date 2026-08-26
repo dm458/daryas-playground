@@ -1,6 +1,6 @@
 # Shadow-Frog in Lattice — Feature Requirements
 
-**Status:** Draft for alignment  
+**Status:** Draft for alignment<br>
 **Feature:** Cross-project idea discovery in Lattice
 
 ## Problem and value proposition
